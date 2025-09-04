@@ -21,3 +21,5 @@ O sistema consiste em 4 sensores de temperatura infravermelho conectados a um mi
 
 </div>
 
+## Objetivo
+Desenvolver um 
