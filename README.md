@@ -4,8 +4,10 @@ O sistema consiste em 4 sensores de temperatura infravermelho conectados a um mi
 
 
 # JARRV
+<div align="left">
+  <img src="imagens/LogoJARRV.png" alt="Logo" width="200"/>
+</div>
 
-*aqui será colocada a imagem da empresa*
 
 ### Desenvolvimento Ágil - EC46C - 2025/1
 
