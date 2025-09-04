@@ -1,18 +1,13 @@
-# tire-temperature-monitor
-
-O sistema consiste em 4 sensores de temperatura infravermelho conectados a um microcontrolador ESP32-C3 Mini e um módulo can MCP2551. O sistema realizará a leitura dos sensores de temperatura e enviará os dados para o sistema de telemetria já existente. Além disso, será implementada uma interface gráfica em java para apresentar os dados recebidos.
-
-
 # JARRV
 <div align="left">
-  <img src="imagens/LogoJARRV.png" alt="Logo" width="200"/>
+  <img src="imagens/LogoJARRVofc.png" alt="Logo" width="600"/>
 </div>
 
 
 ### Desenvolvimento Ágil - EC46C - 2025/1
 
 ## Integrantes
-<div align="center">
+<div align="left">
 
 | Membros |
 |:-------|
@@ -24,4 +19,12 @@ O sistema consiste em 4 sensores de temperatura infravermelho conectados a um mi
 </div>
 
 ## Objetivo
-Desenvolver um 
+Desenvolver um sistema de monitoramento de temperatura de pneus para protótipo do projeto de extensão Fórmula CP, utilizando sensores infravermelho e um microcontrolador e enviar as leituras dos sensores para o sistema de telemetria já existente do projeto. Projetando uma interface gráfica para visualização dos dados.
+
+## Público-Alvo
+O público-alvo do projeto são os membros do projeto de extensão do Fórmula CP e entusiastas.
+
+
+## Sobre o sistema
+### tire-temperature-monitor
+O sistema consiste em 4 sensores de temperatura infravermelho conectados a um microcontrolador ESP32-C3 Mini e um módulo can MCP2551. O sistema realizará a leitura dos sensores de temperatura e enviará os dados para o sistema de telemetria já existente. Além disso, será implementada uma interface gráfica em java para apresentar os dados recebidos.
