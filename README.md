@@ -1,6 +1,13 @@
 # JARRV
 <div align="left">
-  <img src="imagens/LogoJARRVofc.png" alt="Logo" width="600"/>
+  <picture>
+    <!-- Dark mode image -->
+    <source srcset="imagens/LogoJARRVofc-dark.png" media="(prefers-color-scheme: dark)" />
+    <!-- Light mode image -->
+    <source srcset="imagens/LogoJARRVofc.png" media="(prefers-color-scheme: light)" />
+    <!-- Default/fallback image -->
+    <img src="imagens/LogoJARRVofc-dark.png" alt="Logo" width="600"/>
+  </picture>
 </div>
 
 <br><br>
