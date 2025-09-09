@@ -12,10 +12,10 @@
 ## Integrantes
 | Membros |
 |:--------|
-| [Rafael Munhoz Castro](https://github.com/RafinhaW74) |
+| [Rafael Munhoz Castro](https://github.com/RafinhaW74)   |
 | [Vinícius Souza Dias](https://www.google.com/?hl=pt_BR) |
 | [João Alberto Benaci](https://www.google.com/?hl=pt_BR) |
-| [Arthur Henrique Jardim](https://www.google.com/?hl=pt_BR) |
+| [Arthur Henrique Jardim](https://github.com/arthur-hj)  |
 
 
 <br><br>
