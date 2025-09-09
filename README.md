@@ -6,7 +6,7 @@
     <!-- Light mode image -->
     <source srcset="imagens/LogoJARRVofc.png" media="(prefers-color-scheme: light)" />
     <!-- Default/fallback image -->
-    <img src="imagens/LogoJARRVofc-dark.png" alt="Logo" width="800"/>
+    <img src="imagens/LogoJARRVofc-dark.png" alt="Logo" width="700"/>
   </picture>
 </div>
 
@@ -21,7 +21,7 @@
 |:--------|
 | [Rafael Munhoz Castro](https://github.com/RafinhaW74)   |
 | [Vinícius Souza Dias](https://www.google.com/?hl=pt_BR) |
-| [João Alberto Benaci](https://github.com/k7vinilstorage)) |
+| [João Alberto Benaci](https://github.com/k7vinilstorage) |
 | [Arthur Henrique Jardim](https://github.com/arthur-hj)  |
 
 
