@@ -12,7 +12,7 @@
 
 <br><br>
 
-## Desenvolvimento Ágil - EC46C - 2025/1
+## Desenvolvimento Ágil - EC46C - 2025/2
 
 <br>
 
