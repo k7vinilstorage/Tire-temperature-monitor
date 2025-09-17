@@ -4,7 +4,7 @@
 
 | ID   |                                 Requisito                                 | Prioridade | Requisitos Relacionados |
 | :--: | :-----------------------------------------------------------------------: | :--------: | :---------: |
-| RF01 ||       |         |
+| RF01 | O sistema deve realizar a leitura da temperatura do pneu através de um sensor infravermelho (sem contato com o pneu) | Alta| |
 | RF02 |                     |  Alta      |      RF25   |
 | RF03 |                           |  Baixa     |     -       |
 | RF04 |                                 |            |             |
