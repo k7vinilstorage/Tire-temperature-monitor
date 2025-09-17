@@ -4,9 +4,9 @@
 
 | ID   |                                 Requisito NF                              | Categoria/Tipo | Prioridade | Requisitos Relacionados |
 | :--: | :-----------------------------------------------------------------------: |:-------------: | :--------: | :-----------------: |
-| RF01 |  O usuário deve ser capaz de finalizar a compra com menos de 3 cliques na página. | Produto/Usabilidade               |Média       |    RNF12             |
-| RF02 |  O executável do sistema não deve ser superior a 512 Kbytes.     |  Produto/eficiência     |Alta        |    RF8              |
-| RF03 |  O sistema deve ser implementado na linguagem Python.              |  Organizacionais/Implementação       |Baixa       |     -               |
+| RF01 | O sitema da interface deve receber pelo menos 1 leitura por segundo |Usabilidade               |Alta       |    RF             |
+| RF02 |  |  | |  |
+| RF03 |  |  | |  |
 
 <div style="text-align: center">
 <p>Tabela 2: Requisitos Não Funcionais</p>
@@ -15,3 +15,4 @@
 # 2. Referências
 
 <a href="../README.md">VOLTAR INÍCIO</a>
+
