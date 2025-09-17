@@ -7,14 +7,12 @@
 | RF01 | O sistema do veiculo deve ler os dados vindos dos sensores em celsius | Alta | |
 | RF02 | O sistema do veiculo deve enviar os dados via rede CAN | Alta | RF01 |
 | RF03 | O sistema da interface deve receber os dados vindo via lora pela porta serial | Alta | |
-| RF04 | O sistema da inteface deve tratar os dados recebidos | Alta| |
-| RF05 | O sitema da interface deve armazenar os dados de forma temporaria | Alta |
-
-| RF04 | O sistema deve guardar os dados em um histórico para comparações. Memória reseta a cada vez que software é iniciado |            |             |
-| RF05 | O sistema deve ser capaz de realizar conversões entre outras unidades de medidas (Kelvin para Graus etc) |            |             |
-
-| RF07 | O sistema deve oferecer a opção de salvar os dados e gráficos em um arquivo em formato PDF ou parecido |            |             |
-| RF08 | O sistema deve oferecer ao usuários a opção de visualizar a temperatura dos pneus em um intervalo de tempo personalizado |            |             |
+| RF04 | O sistema da interface deve tratar os dados recebidos | Alta|RF03 |
+| RF05 | O sistema da interface deve armazenar os dados de forma temporaria | Alta | RF04|
+| RF06 | O sistema da interface deve exibir os dados instantâneos recebidos | Alta | RF04 |
+| RF07 | O sistema da interface deve exibir em um grafico a temperatura de cada peneu | Alta | RF05 |
+| RF08 | O sistema deve oferecer a opção de salvar os dados e gráficos em um arquivo em formato PDF ou parecido | Medio | RF04|
+| RF09 | O sistema deve oferecer ao usuários a opção de visualizar a temperatura dos pneus em um intervalo de tempo personalizado | Medio | RF07 |
 
 
 <div style="text-align: center">
