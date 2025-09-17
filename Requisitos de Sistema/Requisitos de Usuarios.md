@@ -17,11 +17,11 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
         <tr>
             <span id="ustory-01"></span>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1">US01</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1">Eu, como usuário regular, quero poder assitir vídeos para meu entreterimento</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>Ao entrar no aplicativo o vídeo já deve aparecer na página inicial</li><li> A tela do vídeo deve estar maximizada na tela do celular</li><li>Os vídeos devem aparecer em sequência</li></ol></td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1">Eu, como usuário, quero poder monitorar os dados do carro para analisa-los.</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>Ao entrar no aplicativo vários gráficos com diversas informações diferentes devem aparecer</li><li> Os gráficos podem ficar ocultos por opção do usuários</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Alta</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF07</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">13</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">-</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">-</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
