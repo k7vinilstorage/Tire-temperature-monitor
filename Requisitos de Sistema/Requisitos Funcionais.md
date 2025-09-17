@@ -4,8 +4,8 @@
 
 | ID   |                                 Requisito                                 | Prioridade | Requisitos Relacionados |
 | :--: | :-----------------------------------------------------------------------: | :--------: | :---------: |
-| RF01 | O sistema deve realizar a leitura da temperatura do pneu através de um sensor infravermelho (sem contato com o pneu) | Alta| |
-| RF02 |                     |  Alta      |      RF25   |
+| RF01 | O sistema deve ler o valor do sensor de temperatura | Alta| |
+| RF02 | O sistema deve converter o valor do sensor para kelvin| Alta| |
 | RF03 |                           |  Baixa     |     -       |
 | RF04 |                                 |            |             |
 | RF05 |                |            |             |
