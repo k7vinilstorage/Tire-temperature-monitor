@@ -4,9 +4,10 @@
 
 | ID   |                                 Requisito NF                              | Categoria/Tipo | Prioridade | Requisitos Relacionados |
 | :--: | :-----------------------------------------------------------------------: |:-------------: | :--------: | :-----------------: |
-| RF01 | O sitema da interface deve receber pelo menos 1 leitura por segundo |Usabilidade               |Alta       |    RF             |
-| RF02 |  |  | |  |
-| RF03 |  |  | |  |
+| RNF01 | O sistema da interface deve receber pelo menos 1 leitura por segundo |Poduto/Eficiencia |Alta | RF03 |
+| RNF02 | O sistema da interface deve permitir escolher em qual unidade a temperatura vai ser exibida (celsius, kelvin ou fahrenheit)|Poduto/Usabilidade | Alta | | RF06 e RF07  |
+| RNF03 | O sistema da interface deve ser implementado em Java | Organizacionais/Implementação | Alta | |  |
+| RNF04 | O sistema do veiculo deve ser implementado em C | Organizacionais/Implementação | Alta | |  |
 
 <div style="text-align: center">
 <p>Tabela 2: Requisitos Não Funcionais</p>
@@ -15,4 +16,5 @@
 # 2. Referências
 
 <a href="../README.md">VOLTAR INÍCIO</a>
+
 
