@@ -5,8 +5,8 @@
 | ID   |                                 Requisito                                 | Prioridade | Requisitos Relacionados |
 | :--: | :-----------------------------------------------------------------------: | :--------: | :---------: |
 | RF01 | O sistema do veiculo deve ler os dados vindos dos sensores em celsius | Alta | |
-| RF02 | O sistema do veiculo deve enviar os dados via rede CAN | Alta | RF01 |
-| RF03 | O sistema da interface deve receber os dados vindo via lora pela porta serial | Alta | |
+| RF02 | O sistema do veiculo deve enviar os dados dos sensores para telemetria via rede CAN | Alta | RF01 |
+| RF03 | O sistema da interface deve receber os dados vindo via LoRa pela porta serial | Alta | |
 | RF04 | O sistema da interface deve tratar os dados recebidos | Alta|RF03 |
 | RF05 | O sistema da interface deve armazenar os dados de forma temporaria | Alta | RF04|
 | RF06 | O sistema da interface deve exibir os dados instantâneos recebidos | Alta | RF04 |
