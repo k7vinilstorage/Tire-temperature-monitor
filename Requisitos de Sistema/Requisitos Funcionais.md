@@ -12,8 +12,8 @@
 | RF06 | O sistema da interface deve exibir instantâneamente os dados recebidos | Alta | RF04 |
 | RF07 | O sistema da interface deve exibir em um grafico a temperatura de cada pneu | Alta | RF05 |
 | RF08 | O sistema da intertace deve oferecer ao usuario a opção de visualizar a temperatura no grafico de cada pneu individualmente | Medio | RF07 |
-| RF09 | O sistema deve oferecer a opção de salvar os dados e gráficos em um arquivo em formato PDF ou parecido | Medio | RF04|
-| RF10 | O sistema deve oferecer ao usuários a opção de visualizar a temperatura dos pneus em um intervalo de tempo personalizado | Medio | RF07 |
+| RF09 | O sistema da interface deve oferecer a opcao de salvar os dados e grafico em um arquivo em formato PDF ou parecido | Medio | RF04|
+| RF10 | O sistema da interface deve oferecer ao usuarios a opcao de visualizar a temperatura dos pneus em um intervalo de tempo personalizado | Medio | RF07 |
 
 
 
