@@ -6,7 +6,7 @@
 | :--: | :-----------------------------------------------------------------------: | :--------: | :---------: |
 | RF01 | O sistema do veiculo deve ler os dados vindos dos sensores em celsius | Alta | |
 | RF02 | O sistema do veiculo deve enviar os dados dos sensores para telemetria via rede CAN | Alta | RF01 |
-| RF03 | O sistema da interface deve receber os dados vindo via LoRa pela porta serial | Alta | |
+| RF03 | O sistema da interface deve receber os dados vindo via LoRa pela porta serial do computador | Alta | |
 | RF04 | O sistema da interface deve tratar os dados recebidos | Alta|RF03 |
 | RF05 | O sistema da interface deve armazenar os dados de forma temporaria | Alta | RF04|
 | RF06 | O sistema da interface deve exibir instantâneamente os dados recebidos | Alta | RF04 |
@@ -14,6 +14,7 @@
 | RF08 | O sistema da intertace deve oferecer ao usuario a opção de visualizar a temperatura no grafico de cada pneu individualmente | Medio | RF07 |
 | RF09 | O sistema da interface deve oferecer a opcao de salvar os dados e grafico em um arquivo em formato PDF ou parecido | Medio | RF04|
 | RF10 | O sistema da interface deve oferecer ao usuarios a opcao de visualizar a temperatura dos pneus em um intervalo de tempo personalizado | Medio | RF07 |
+
 
 
 
