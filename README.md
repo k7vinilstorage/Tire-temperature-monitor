@@ -39,3 +39,8 @@ O público-alvo do projeto são os membros do projeto de extensão do Fórmula C
 ## Sobre o sistema
 ### tire-temperature-monitor
 O sistema consiste em 4 sensores de temperatura infravermelho conectados a um microcontrolador ESP32-C3 Mini e um módulo can MCP2551. O sistema realizará a leitura dos sensores de temperatura e enviará os dados para o sistema de telemetria já existente. Além disso, será implementada uma interface gráfica em java para apresentar os dados recebidos.
+
+<br><br>
+
+## Protótipo de Alta Fidelidade
+LINK: { https://www.figma.com/design/oQvmDR8uu1Z83s6j8ocahO/TTMS?node-id=0-1&t=0RBe8sDUXeY0sgaT-1 }
