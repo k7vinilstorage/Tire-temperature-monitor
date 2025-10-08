@@ -21,7 +21,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>Ao entrar no aplicativo vários gráficos com diversas informações diferentes devem aparecer</li><li> Os gráficos podem ficar ocultos por opção do usuários</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Alta</td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">-</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">-</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">8</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
@@ -30,7 +30,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>Os dados recebidos pela porta serial devem ser exibidos na interface em tempo real (sem necessidade de reiniciar o sistema).</li><li> Se a porta serial for desconectada, o sistema deve informar ao usuário com uma mensagem de erro clara.</li><li> O sistema não deve travar caso receba dados inválidos ou corrompidos (deve ignorar e continuar recebendo).</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle"> Alta </td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF10</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">5</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">13</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
@@ -39,7 +39,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>Os dados brutos devem ser convertidos em valores legíveis</li><li>O sistema deve validar os dados recebidos, descartando pacotes incompletos ou inválidos.</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Alta</td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF04</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">5</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">3</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
@@ -48,7 +48,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>O sistema deve manter os dados recebidos em memória enquanto a sessão da aplicação estiver ativa.</li><li>Ao encerrar ou reiniciar a aplicação, os dados armazenados temporariamente devem ser descartados.</li><li>Deve existir um mecanismo de limpeza automática caso o limite máximo de registros seja atingido.</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Alta</td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF05</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">5</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">3</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
@@ -57,7 +57,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>A interface deve exibir os dados em ordem cronológica de chegada.</li><li>O sistema deve suportar fluxos contínuos de dados sem travamentos ou atrasos perceptíveis.</li><li>Caso a conexão com a fonte de dados (rede LoRa/serial) seja perdida, a interface deve informar ao usuário que o monitoramento em tempo real foi interrompido.</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Alta</td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF06</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">5</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">3</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
@@ -84,7 +84,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>O sistema deve permitir ao usuário exportar os dados coletados e os gráficos gerados em um arquivo PDF (ou formato equivalente, como CSV para dados brutos).</li><li>O usuário deve poder escolher o local onde salvar o arquivo.</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Média</td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF09</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">3</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">5</td>
         </tr>
         <tr>
             <span id="ustory-01"></span>
@@ -93,7 +93,7 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle" rowspan="1"><ol><li>O usuário deve poder selecionar um intervalo de tempo</li><li>O gráfico deve atualizar automaticamente para exibir apenas os dados do intervalo escolhido.</li><li>O sistema deve mostrar a média, máxima e mínima da temperatura nesse intervalo.</li></ol></td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">Média</td>
             <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">RF10</td>
-            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">3</td>
+            <td style="border-style:solid;border-width:1px;text-align:center;vertical-align:middle">8</td>
         </tr>
 </table>
 
