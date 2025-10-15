@@ -14,8 +14,8 @@
             "type": "java",
             "name": "Current File",
             "request": "launch",
-            "mainClass": "app",
-            "vmArgs": "--module-path C:\\Users\\valuc\\OneDrive\\Documentos\\certificadora2\\Tire-temperature-monitor\\software\\lib\\ --add-modules javafz.controls, javafx.fxml",
+            "mainClass": "Main",
+            "vmArgs": "--module-path C:\\Users\\valuc\\OneDrive\\Documentos\\certificadora2\\Tire-temperature-monitor\\software\\javaFX\\lib\\ --add-modules javafx.controls,javafx.fxml",
             "args": "",
         }
     ]
