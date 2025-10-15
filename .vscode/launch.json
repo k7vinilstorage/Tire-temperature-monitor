@@ -15,7 +15,7 @@
             "name": "Current File",
             "request": "launch",
             "mainClass": "app",
-            "vmArgs": "--module-path lib/ --add-modules javafz.controls",
+            "vmArgs": "--module-path C:\\Users\\valuc\\OneDrive\\Documentos\\certificadora2\\Tire-temperature-monitor\\software\\lib\\ --add-modules javafz.controls, javafx.fxml",
             "args": "",
         }
     ]
