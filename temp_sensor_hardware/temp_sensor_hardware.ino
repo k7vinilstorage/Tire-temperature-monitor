@@ -2,8 +2,8 @@
 #include "driver/twai.h"
 #include <Wire.h>
 
-int can_tx = 20;
-int can_rx = 21;
+int can_tx = 18;
+int can_rx = 19;
 
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 
@@ -46,7 +46,7 @@ void sendTemp(int temp) {
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(0, 1);
+  Wire.begin(16, 17);
   canBegin();
 
   if (!mlx.begin()) {
@@ -56,7 +56,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("Object = "); Serial.print(mlx.readObjectTempC()); Serial.println("*C");
+  //Serial.print("Object = "); Serial.print(mlx.readObjectTempC()); Serial.println("*C");
   sendTemp(mlx.readObjectTempC() * 100);
-  delay(1000);
+  delay(100);
 }
