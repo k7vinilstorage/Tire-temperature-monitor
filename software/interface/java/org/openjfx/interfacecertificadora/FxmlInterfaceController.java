@@ -5,18 +5,21 @@
 package org.openjfx.interfacecertificadora;
 
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Data;
-import javafx.scene.control.Label;
 import javafx.util.Duration;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.chart.LineChart;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.shape.Circle;
 
 
 
@@ -36,6 +39,72 @@ public class FxmlInterfaceController implements Initializable {
     @FXML
     private Label rtTitle1;
     
+    @FXML
+    private ToggleGroup ToogleTemp;
+
+    @FXML
+    private ToggleButton btnC;
+
+    @FXML
+    private Button btnExpChart;
+
+    @FXML
+    private Button btnExpData;
+
+    @FXML
+    private ToggleButton btnF;
+
+    @FXML
+    private ToggleButton btnFL;
+
+    @FXML
+    private ToggleButton btnFR;
+
+    @FXML
+    private ToggleButton btnK;
+
+    @FXML
+    private ToggleButton btnRL;
+
+    @FXML
+    private ToggleButton btnRR;
+
+    @FXML
+    private ToggleButton btnStatus;
+
+    @FXML
+    private Circle cicleStatus;
+
+    @FXML
+    private Label rtInformation;
+
+    @FXML
+    private Label rtStatus;
+
+    @FXML
+    private Label rtTEmpFL;
+
+    @FXML
+    private Label rtTEmpFR;
+
+    @FXML
+    private Label rtTEmpRL;
+
+    @FXML
+    private Label rtTEmpRR;
+
+    @FXML
+    private Label rtUnitFL;
+
+    @FXML
+    private Label rtUnitFR;
+
+    @FXML
+    private Label rtUnitRL;
+
+    @FXML
+    private Label rtUnitRR;
+    
     private XYChart.Series frontRigth;
     private XYChart.Series frontLeft;
     private XYChart.Series rearRigth;
@@ -43,6 +112,7 @@ public class FxmlInterfaceController implements Initializable {
     
     private float currentX = 0;
     private final int TOTAL_POINTS = 999999;
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -62,19 +132,66 @@ public class FxmlInterfaceController implements Initializable {
         lcTemp.getData().addAll(frontLeft,frontRigth,rearLeft,rearRigth);
         
         
+        
         for(float i= 0; i <50; i+=1){
             frontRigth.getData().add(new Data(i, gerarGrafico(i,0.01f)));
             frontLeft.getData().add(new Data(i, gerarGrafico(i,0.003f)));
             rearRigth.getData().add(new Data(i, gerarGrafico(i,0.004f)));
             rearLeft.getData().add(new Data(i, gerarGrafico(i,0.001f)));
         }
-        frontRigth.setNode(null);
-        frontLeft.setNode(null);
-        rearRigth.setNode(null);
-        rearLeft.setNode(null);
         
        //iniciarAtualizacaoAutomatica();
     }    
+    
+    @FXML
+    void exchangeTemperature(ActionEvent event) {
+        rtInformation.setText("atualizar temperatura");
+    }
+
+    @FXML
+    void exportChart(ActionEvent event) {
+        rtInformation.setText("Exportar grafico");
+    }
+
+    @FXML
+    void exportReport(ActionEvent event) {
+        rtInformation.setText("Exportar dados");
+    }
+
+    @FXML
+    void highlightFrontLeft(ActionEvent event) {
+        rtInformation.setText("Destaque FL");
+    }
+
+    @FXML
+    void highlightFrontRigth(ActionEvent event) {
+        rtInformation.setText("FR");
+    }
+
+    @FXML
+    void highlightRearLeft(ActionEvent event) {
+        rtInformation.setText("RL");
+    }
+
+    @FXML
+    void highlightRearRigth(ActionEvent event) {
+        rtInformation.setText("RR");
+    }
+
+    @FXML
+    void readData(ActionEvent event) {
+        rtInformation.setText("Ler dados");
+    }
+
+    @FXML
+    void selectRange(ActionEvent event) {
+        rtInformation.setText("Mudar intervalo");
+    }
+    
+    
+    
+    
+    
     
     public static double cubica(double a, double b, double c, double d, double x) {
         return b * Math.pow(x, 2) + c * x + d;

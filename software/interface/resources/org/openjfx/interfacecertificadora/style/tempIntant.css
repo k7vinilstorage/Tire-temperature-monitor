@@ -1,0 +1,29 @@
+.rtInstant{
+    -fx-font: Microsoft JhengHei UI;
+    -fx-font-weight:600;
+}
+
+.rtTitle{
+    -fx-font-size: 40px;
+    -fx-text-fill:#FFFFFF;
+}
+
+.VBIntantTempTire{
+
+}
+
+.HBTemp{
+    -fx-background-color: #000;
+    -fx-background-radius: 10px;
+}
+
+.rtTemp{
+    -fx-font-size: 35px;
+    -fx-text-fill:#ffffff;
+}
+
+.rtLabelTemp{
+    -fx-font-size: 20px;
+    -fx-text-fill:#000;
+}
+

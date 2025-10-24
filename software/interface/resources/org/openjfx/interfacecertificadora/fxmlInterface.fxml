@@ -8,12 +8,18 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root id="AnchorPane" minHeight="800.0" minWidth="300.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainFxmlClass" type="AnchorPane" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.interfacecertificadora.FxmlInterfaceController">
+<AnchorPane id="AnchorPane" minHeight="800.0" minWidth="300.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.interfacecertificadora.FxmlInterfaceController">
     
    <children>
       <SplitPane id="mainSplitPane" dividerPositions="0.0862708719851577" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -38,14 +44,45 @@
                      <children>
                         <VBox prefHeight="982.0" prefWidth="1294.0" styleClass="VBChart" stylesheets="@style/gridAll.css" HBox.hgrow="ALWAYS">
                            <children>
-                              <AnchorPane prefHeight="111.0" prefWidth="648.0" />
+                              <AnchorPane prefHeight="108.0" prefWidth="648.0">
+                                 <children>
+                                    <ToggleButton fx:id="btnStatus" layoutX="43.0" layoutY="27.0" mnemonicParsing="false" onAction="#readData" styleClass="btn-All" stylesheets="@style/btn.css" AnchorPane.leftAnchor="0.0">
+                                       <graphic>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Circle fx:id="cicleStatus" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </Circle>
+                                                <Label fx:id="rtStatus" stylesheets="@style/btn.css" text="Offline">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </graphic>
+                                    </ToggleButton>
+                                    <Label fx:id="rtInformation" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="35.0" prefHeight="39.0" prefWidth="953.0" textFill="RED" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="220.0">
+                                       <font>
+                                          <Font name="Microsoft JhengHei UI Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding></AnchorPane>
                               <AnchorPane prefHeight="712.0" prefWidth="648.0">
                                  <children>
-                                    <VBox minHeight="-Infinity" prefHeight="500.0" prefWidth="100.0" styleClass="VBLineChart" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <VBox minHeight="400.0" prefHeight="500.0" prefWidth="100.0" styleClass="VBLineChart" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <AnchorPane prefHeight="803.0" prefWidth="1222.0">
                                              <children>
-                                                <LineChart fx:id="lcTemp" createSymbols="false" stylesheets="@style/lineChart.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <LineChart fx:id="lcTemp" createSymbols="false" minWidth="400.0" stylesheets="@style/lineChart.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                   <xAxis>
                                                     <NumberAxis animated="false" label="Tempo (s)" minorTickCount="10" side="BOTTOM" upperBound="120.0" />
                                                   </xAxis>
@@ -59,67 +96,56 @@
                                              <children>
                                                 <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="500.0" spacing="40.0" styleClass="HBButton" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Button id="btnFL" fx:id="btnFL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" styleClass="btn-All" stylesheets="@style/btn.css" text="Front Left" textAlignment="CENTER">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI Bold" size="20.0" />
-                                                         </font>
-                                                         <padding>
-                                                            <Insets top="1.0" />
-                                                         </padding></Button>
-                                                      <Button id="btnFR" fx:id="btnFR" maxHeight="45.0" maxWidth="120.0" minHeight="45.0" minWidth="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" styleClass="btn-All" stylesheets="@style/btn.css" text="Front Rigth">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI" size="20.0" />
-                                                         </font>
-                                                         <padding>
-                                                            <Insets top="1.0" />
-                                                         </padding></Button>
-                                                      <Button id="btnRL" fx:id="btnRL" maxHeight="45.0" maxWidth="120.0" minHeight="45.0" minWidth="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" styleClass="btn-All" stylesheets="@style/btn.css" text="Rear Left">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI" size="20.0" />
-                                                         </font>
-                                                         <padding>
-                                                            <Insets top="1.0" />
-                                                         </padding></Button>
-                                                      <Button id="btnRR" fx:id="btnRR" maxHeight="45.0" maxWidth="120.0" minHeight="45.0" minWidth="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" styleClass="btn-All" stylesheets="@style/btn.css" text="Rear Rigth">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI" size="20.0" />
-                                                         </font>
-                                                         <padding>
-                                                            <Insets top="1.0" />
-                                                         </padding></Button>
-                                                      <Button id="btnC" fx:id="btnC" maxHeight="45.0" maxWidth="120.0" minHeight="45.0" minWidth="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" stylesheets="@style/btn.css" text="Celsius ">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI" size="20.0" />
-                                                         </font>
+                                                      <ToggleButton fx:id="btnFL" mnemonicParsing="false" onAction="#highlightFrontLeft" styleClass="btn-All" stylesheets="@style/btn.css" text="Front Left">
                                                          <padding>
                                                             <Insets top="1.0" />
                                                          </padding>
-                                                         <styleClass>
-                                                            <String fx:value="btn-All" />
-                                                            <String fx:value="btn-Temp" />
-                                                         </styleClass></Button>
-                                                      <Button id="btnF" fx:id="btnF" maxHeight="45.0" maxWidth="120.0" minHeight="45.0" minWidth="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" stylesheets="@style/btn.css" text="Fahrenheit ">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI" size="20.0" />
-                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="btnFR" mnemonicParsing="false" onAction="#highlightFrontRigth" styleClass="btn-All" stylesheets="@style/btn.css" text="Front Rigth">
                                                          <padding>
                                                             <Insets top="1.0" />
                                                          </padding>
-                                                         <styleClass>
-                                                            <String fx:value="btn-All" />
-                                                            <String fx:value="btn-Temp" />
-                                                         </styleClass></Button>
-                                                      <Button id="btnK" fx:id="btnK" maxHeight="45.0" maxWidth="120.0" minHeight="45.0" minWidth="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" stylesheets="@style/btn.css" text="Kelvin">
-                                                         <font>
-                                                            <Font name="Microsoft JhengHei UI" size="20.0" />
-                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="btnRL" mnemonicParsing="false" onAction="#highlightRearLeft" styleClass="btn-All" stylesheets="@style/btn.css" text="Rear Left">
                                                          <padding>
                                                             <Insets top="1.0" />
                                                          </padding>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="btnRR" mnemonicParsing="false" onAction="#highlightRearRigth" styleClass="btn-All" stylesheets="@style/btn.css" text="Rear Rigth">
+                                                         <padding>
+                                                            <Insets top="1.0" />
+                                                         </padding>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="btnC" mnemonicParsing="false" onAction="#exchangeTemperature" selected="true" stylesheets="@style/btn.css" text="Celsius">
                                                          <styleClass>
                                                             <String fx:value="btn-All" />
                                                             <String fx:value="btn-Temp" />
-                                                         </styleClass></Button>
+                                                         </styleClass>
+                                                         <padding>
+                                                            <Insets top="1.0" />
+                                                         </padding>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="ToogleTemp" />
+                                                         </toggleGroup>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="btnF" mnemonicParsing="false" onAction="#exchangeTemperature" stylesheets="@style/btn.css" text="Fahrenheit " toggleGroup="$ToogleTemp">
+                                                         <styleClass>
+                                                            <String fx:value="btn-All" />
+                                                            <String fx:value="btn-Temp" />
+                                                         </styleClass>
+                                                         <padding>
+                                                            <Insets top="1.0" />
+                                                         </padding>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="btnK" mnemonicParsing="false" stylesheets="@style/btn.css" text="Kelvin" toggleGroup="$ToogleTemp">
+                                                         <styleClass>
+                                                            <String fx:value="btn-All" />
+                                                            <String fx:value="btn-Temp" />
+                                                         </styleClass>
+                                                         <padding>
+                                                            <Insets top="1.0" />
+                                                         </padding>
+                                                      </ToggleButton>
                                                    </children>
                                                 </HBox>
                                              </children>
@@ -133,32 +159,41 @@
                               </AnchorPane>
                               <AnchorPane minHeight="-Infinity" prefHeight="168.0" prefWidth="648.0">
                                  <children>
-                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" styleClass="HBButton-System" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <HBox alignment="CENTER" layoutY="7.0" minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" spacing="190.0" styleClass="HBButton-System" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
                                        <children>
-                                          <Button fx:id="btnExpChart" mnemonicParsing="false" stylesheets="@style/btn.css" text="Exportar Grafico">
+                                          <Button fx:id="btnExpChart" mnemonicParsing="false" onAction="#exportChart" stylesheets="@style/btn.css" text="Exportar Grafico">
                                              <styleClass>
                                                 <String fx:value="btn-All" />
                                                 <String fx:value="btn-Opt" />
                                              </styleClass>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
                                           </Button>
-                                          <Button fx:id="btnExpData" mnemonicParsing="false" stylesheets="@style/btn.css" text="Gerar Relatório">
+                                          <Button fx:id="btnExpData" mnemonicParsing="false" onAction="#exportReport" stylesheets="@style/btn.css" text="Gerar Relatório">
                                              <styleClass>
                                                 <String fx:value="btn-All" />
                                                 <String fx:value="btn-Opt" />
                                              </styleClass>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
                                           </Button>
-                                          <Button mnemonicParsing="false" stylesheets="@style/btn.css" text="Selecionar Intervalo">
+                                          <Button mnemonicParsing="false" onAction="#selectRange" stylesheets="@style/btn.css" text="Selecionar Intervalo">
                                              <styleClass>
                                                 <String fx:value="btn-All" />
                                                 <String fx:value="btn-Opt" />
                                              </styleClass>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
                                           </Button>
                                        </children>
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
                                        <padding>
-                                          <Insets right="20.0" />
+                                          <Insets left="40.0" right="20.0" />
                                        </padding>
                                     </HBox>
                                  </children></AnchorPane>
@@ -166,8 +201,147 @@
                         </VBox>
                         <VBox minHeight="-Infinity" prefHeight="982.0" prefWidth="647.0" styleClass="VBInstant" stylesheets="@style/gridAll.css">
                            <children>
-                              <AnchorPane prefHeight="90.0" prefWidth="1262.0" />
-                              <Label text="Boaaaaa" />
+                              <AnchorPane prefHeight="818.0" prefWidth="636.0">
+                                 <padding>
+                                    <Insets top="108.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" styleClass="VBInstaTemp" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <AnchorPane maxHeight="-Infinity" minHeight="80.0" prefHeight="92.0" prefWidth="200.0" styleClass="apInstantTempTitle" stylesheets="@style/gridAll.css">
+                                             <children>
+                                                <Label layoutX="46.0" layoutY="17.0" stylesheets="@style/tempIntant.css" text="Temperatura Instantânea" textFill="WHITE" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="17.0">
+                                                   <font>
+                                                      <Font name="Microsoft JhengHei UI" size="20.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="rtTitle" />
+                                                      <String fx:value="rtInstant" />
+                                                   </styleClass>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <GridPane alignment="CENTER" prefHeight="609.0" prefWidth="566.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                         <children>
+                                                            <Label fx:id="rtTEmpFL" stylesheets="@style/tempIntant.css" text="68">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <Label fx:id="rtUnitFL" stylesheets="@style/tempIntant.css" text="°C">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Label stylesheets="@style/tempIntant.css" text="Front Left">
+                                                         <styleClass>
+                                                            <String fx:value="rtLabelTemp" />
+                                                            <String fx:value="rtInstant" />
+                                                         </styleClass>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                         <children>
+                                                            <Label fx:id="rtTEmpRL" stylesheets="@style/tempIntant.css" text="68">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <Label fx:id="rtUnitRL" stylesheets="@style/tempIntant.css" text="°C">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Label stylesheets="@style/tempIntant.css" text="Rear Left">
+                                                         <styleClass>
+                                                            <String fx:value="rtLabelTemp" />
+                                                            <String fx:value="rtInstant" />
+                                                         </styleClass>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                         <children>
+                                                            <Label fx:id="rtTEmpFR" stylesheets="@style/tempIntant.css" text="68">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <Label fx:id="rtUnitFR" stylesheets="@style/tempIntant.css" text="°C">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Label stylesheets="@style/tempIntant.css" text="Front Rigth">
+                                                         <styleClass>
+                                                            <String fx:value="rtLabelTemp" />
+                                                            <String fx:value="rtInstant" />
+                                                         </styleClass>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                         <children>
+                                                            <Label fx:id="rtTEmpRR" stylesheets="@style/tempIntant.css" text="68">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <Label fx:id="rtUnitRR" stylesheets="@style/tempIntant.css" text="°C">
+                                                               <styleClass>
+                                                                  <String fx:value="rtTemp" />
+                                                                  <String fx:value="rtInstant" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <Label stylesheets="@style/tempIntant.css" text="Rear Rigth">
+                                                         <styleClass>
+                                                            <String fx:value="rtLabelTemp" />
+                                                            <String fx:value="rtInstant" />
+                                                         </styleClass>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="168.0" prefWidth="1262.0" />
                            </children>
                         </VBox>
                      </children>
@@ -180,4 +354,4 @@
          </cursor>
       </SplitPane>
    </children>
-</fx:root>
+</AnchorPane>

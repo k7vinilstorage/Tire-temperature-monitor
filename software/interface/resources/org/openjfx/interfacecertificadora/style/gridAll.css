@@ -31,3 +31,17 @@
     -fx-background-color: transparent;
 }
 
+.VBInstaTemp{
+    -fx-background-color:#FFFFFF;
+
+    -fx-border-color: #000000;
+    -fx-border-width: 5px;
+    -fx-border-radius: 3px
+}
+
+.apInstantTempTitle{
+    -fx-background-color:#2E3353;
+
+    
+}
+
