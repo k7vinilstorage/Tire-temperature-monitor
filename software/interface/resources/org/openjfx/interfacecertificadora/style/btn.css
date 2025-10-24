@@ -1,0 +1,77 @@
+.btn-All{
+    -fx-font:Microsoft JhengHei UI;
+    -fx-font-size: 20;
+    -fx-font-weight:900;
+    -fx-background-radius:10px;
+
+    -fx-min-height:45px;
+    -fx-max-height:45px;
+    -fx-pref-height:45px;
+
+    -fx-min-width:120px;
+    -fx-max-width:120px;
+    -fx-pref-width:120px;
+
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out; 
+}
+
+.btn-All:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 0, 3);
+}
+
+#btnFL{
+    -fx-background-color: rgba(245,2,56,1);
+}
+
+#btnFR{
+    -fx-background-color: rgba(219,129,0,1);
+}
+
+#btnRL{
+    -fx-background-color: rgba(0,199,30,1);
+}
+
+#btnRR{
+    -fx-background-color: rgba(0,159,230,1);
+}
+
+.btn-Temp{
+    -fx-background-color: rgba(255,115,0,1);
+}
+
+#btnC{
+    
+}
+
+#btnF{
+    
+}
+
+#btnK{
+    
+}
+
+.btn-Opt{
+    -fx-background-color: #2E3353;
+    -fx-text-fill:#FFFFFF;
+
+    -fx-min-height:70px;
+    -fx-max-height:70px;
+    -fx-pref-height:70px;
+
+    -fx-min-width:280px;
+    -fx-max-width:280px;
+    -fx-pref-width:280px;
+
+    -fx-font-size: 25;
+
+    -fx-border-color:black;
+    -fx-border-width: 4px;
+    -fx-border-radius:18px;
+
+    -fx-background-radius:25px;
+    
+}

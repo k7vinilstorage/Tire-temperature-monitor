@@ -1,0 +1,20 @@
+
+.chart{
+    -fx-background-color: #E6E6E6;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-legend-visible: false;
+}
+
+.axis-label {
+    -fx-text-fill: #000000;
+}
+
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.default-color0.chart-series-line { -fx-stroke: rgba(245,2,56,1); }/*(255,0,22,1) cinza (120,120,120,0.5) */
+.default-color1.chart-series-line { -fx-stroke: rgba(219,129,0,1); }/*(178,0,202,1) */
+.default-color2.chart-series-line { -fx-stroke: rgba(0,199,30,1); }/*(0,199,30,1) */
+.default-color3.chart-series-line { -fx-stroke: rgba(0,159,230,1); }/*(0,47,255,1) */
