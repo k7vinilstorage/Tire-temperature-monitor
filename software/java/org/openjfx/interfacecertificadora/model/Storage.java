@@ -28,7 +28,7 @@ public class Storage {
         int idStart = binarySearch(range.getStart());
         int idEnd;
 
-        if (range.getEnd() == -1){
+        if (range.getEnd() < 0){
             idEnd = tireArmazen.size() -1;
         }else{
             idEnd = binarySearch(range.getEnd());
