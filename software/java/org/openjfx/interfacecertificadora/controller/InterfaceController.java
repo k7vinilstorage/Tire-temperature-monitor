@@ -261,10 +261,12 @@ public class InterfaceController implements Initializable {
     void readData(ActionEvent event) {
         
         boolean status = reader.isActive();
+        
         if(status){
             reader.stopReading();
             statusOFF();
         }else{
+            
             try{
                 if(rangeFlag){
                     rangeFlag = false;
@@ -283,12 +285,14 @@ public class InterfaceController implements Initializable {
                 }
 
                 new Thread(()->{
+                    
                     while (linechartFlag) try { Thread.sleep(1); } catch (InterruptedException e) {}
                     if(xAxis.getUpperBound() < (60 * scalarX)){
                         Platform.runLater(()-> xAxis.setUpperBound(60 * (int)scalarX));
                     }
 
                     try{
+                        
                         reader.startReading();
                         getErrorSerial();
                         statusOn();
@@ -301,14 +305,10 @@ public class InterfaceController implements Initializable {
                         reader.stopReading();
                         statusOFF();
                     }
-
-                    if(!reader.isActive()){
-                        statusOFF();
-                    }
-                    
                 }).start();
  
             }catch(Throwable e){
+               
                 Platform.runLater(() -> {
                     Notify.notify("error", "Falha na conexão", e.getMessage(), null);
                 });
@@ -319,10 +319,12 @@ public class InterfaceController implements Initializable {
     }
 
     public void getErrorSerial(){
-        reader.setOnError(error -> {
+        reader.setReadErrot(usbError -> {
             Platform.runLater(() -> {
-                System.out.println("erro:" + error);
-                Notify.notify("error", "Erro na leitura serial", error, null);
+                
+                Notify.notify("error", "Erro na leitura serial", usbError, null);
+                reader.stopReading();
+                statusOFF();
             });
             statusOFF();
         });

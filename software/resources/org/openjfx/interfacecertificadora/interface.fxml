@@ -25,12 +25,12 @@
          <items>
             <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" prefWidth="1920.0" style="-fx-background-color: #2E3353;">
                <children>
-                  <Label fx:id="rtTitle1" layoutX="41.0" layoutY="4.0" prefHeight="82.0" prefWidth="264.0" text="FORMULA" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="4.0">
+                  <Label fx:id="rtTitle1" layoutX="41.0" layoutY="4.0" prefHeight="100.0" prefWidth="363.0" text="FORMULA" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="4.0">
                      <font>
                         <Font name="Microsoft Yi Baiti" size="70.0" />
                      </font>
                   </Label>
-                  <Label fx:id="rtTitle2" layoutX="304.0" layoutY="4.0" prefHeight="82.0" prefWidth="100.0" text="CP" textFill="#efcd0c" AnchorPane.leftAnchor="304.0">
+                  <Label fx:id="rtTitle2" layoutX="304.0" layoutY="4.0" prefHeight="82.0" prefWidth="100.0" text="CP" textFill="#efcd0c" AnchorPane.leftAnchor="380.0">
                      <font>
                         <Font name="Microsoft Yi Baiti" size="70.0" />
                      </font>
@@ -49,7 +49,7 @@
                                        <graphic>
                                           <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                              <children>
-                                                <Circle fx:id="cicleStatus" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="btnStatus-off">
+                                                <Circle fx:id="cicleStatus" fill="RED" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="btnStatus-off">
                                                    <HBox.margin>
                                                       <Insets />
                                                    </HBox.margin>
@@ -234,9 +234,9 @@
                                              <children>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="170.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
-                                                            <Label fx:id="rtTEmpFL" stylesheets="@style/tempIntant.css" text="0">
+                                                            <Label fx:id="rtTEmpFL" stylesheets="@style/tempIntant.css" text="999,99">
                                                                <styleClass>
                                                                   <String fx:value="rtTemp" />
                                                                   <String fx:value="rtInstant" />
@@ -260,7 +260,7 @@
                                                 </VBox>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.rowIndex="1">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="170.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
                                                             <Label fx:id="rtTEmpRL" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>
@@ -286,7 +286,7 @@
                                                 </VBox>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.columnIndex="1">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="170.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
                                                             <Label fx:id="rtTEmpFR" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>
@@ -312,7 +312,7 @@
                                                 </VBox>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="170.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
                                                             <Label fx:id="rtTEmpRR" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>

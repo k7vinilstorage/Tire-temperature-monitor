@@ -11,6 +11,7 @@ import org.openjfx.interfacecertificadora.model.TireTemperature;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import java.io.IOException;
 
 import javafx.application.Platform;
 
@@ -21,12 +22,18 @@ import javafx.application.Platform;
 public class USBReader {
 
     private final List<Consumer<TireTemperature>> listeners;
-    private Consumer<String> onError;
     private volatile boolean running;
     private Thread thread;
     private SerialPort portConnection;
     private int x;
     private TireTemperature tireTemperature;
+    
+    private int stringLength;
+    private int fistTire;
+    private Usb usb;
+
+    private Consumer<String> readError;
+    SerialPort port;
     
     public static USBReader usbReaderUnic;
 
@@ -35,6 +42,9 @@ public class USBReader {
         running = false;
         thread = null;
         portConnection = null;
+        stringLength = 31;
+        fistTire = 24;
+        usb = new Usb(stringLength);
 
         x = 0;
     }
@@ -47,48 +57,72 @@ public class USBReader {
     }
     
     public void startReading() throws Exception {
+        
         if (running) return;
         running = true;
         
         thread = new Thread(() -> {
-            try{
-                SerialConnection();  
-            }catch (Exception e){
-                if (onError != null) {
-                    onError.accept(e.getMessage());
-                }
-                running = false;
-                return;
-            }
-
-            if(portConnection == null){
-                if (onError != null) {
-                    onError.accept("Porta não encontrada");
-                }
-                running = false;
-                return;
-            }
             
-            byte[] buffer = new byte[1024];
-            portConnection.readBytes(buffer, buffer.length);
+            usb.setPortCloseError(portError ->{
+                readError.accept(portError);
+            });
+            
+            try{
+                port = usb.serialConnection();
+            }catch (Exception e){
+                readError.accept( e.getMessage());
+                return;
+            }
 
             while (running) {
-                TireTemperature tireTemperature = readFromUSB();  
-                notifyListeners(tireTemperature);    
-                x++;  
-            }
+                try{
+                    String[] data = usb.readUSB(port);
+                    
+                    try{
+                        tireTemperature = procssesData(data);
+                        notifyListeners(tireTemperature); 
+                        x++;  
+
+                    }catch(Exception e){}
+                    
+                    
+                }catch(InterruptedException e){
+                    
+                }catch(IOException e){
+                    readError.accept(e.getMessage());
+                    return;
+                }
+            }  
+                    
         });
         thread.setDaemon(true);
         thread.start();
     }
     
-    public void stopReading(){
+    public void stopReading(){     
         running = false;
+        usb.closePort(port);
         if (thread != null) {
             thread.interrupt();
         }
-        portConnection.closePort();
-        portConnection = null;
+    }
+    
+    public void setReadErrot(Consumer<String> error) {
+        this.readError = error;
+    }
+    
+
+    private TireTemperature procssesData(String[] split) throws Exception{
+        if(split.length == stringLength){
+            int tireFL = Math.round(Float.parseFloat(split[fistTire + 0])*100);
+            int tireFR = Math.round(Float.parseFloat(split[fistTire + 1])*100);
+            int tireRL = Math.round(Float.parseFloat(split[fistTire + 2])*100);
+            int tireRR = Math.round(Float.parseFloat(split[fistTire + 3])*100);
+            
+            return new TireTemperature(tireFL,tireFR,tireRL,tireRR,x);
+        }else{
+            throw new Exception("Dados incompletos");
+        }
     }
 
     public void addDataListener(Consumer<TireTemperature> listener) {
@@ -105,7 +139,6 @@ public class USBReader {
         
         if (bytesRead > 0) {
             String temp = new String(buffer, 0, bytesRead);
-            System.out.println(temp);
             String[] split = temp.split("/");
             if(split.length == 31){
                 try{
@@ -130,53 +163,4 @@ public class USBReader {
         }
     }
     
-    public void SerialConnection() throws Exception{
-        
-        String device = "CH340";
-
-        SerialPort[] ports = SerialPort.getCommPorts();
-        SerialPort targetPort = null;
-        
-        for (SerialPort port : ports) {
-            if (port.getSystemPortName().toLowerCase().contains(device.toLowerCase()) ||
-                port.getDescriptivePortName().toLowerCase().contains(device.toLowerCase())) {
-                targetPort = port;
-                break;
-            }
-        }
-        
-        if (targetPort == null) {
-            if (onError != null) {
-                throw new Exception("Dispositivo não encontrado!");
-            }
-        }
-
-        SerialPort connection = targetPort;
-        connection.setComPortParameters(115200, 8, 1, 0);
-        connection.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 50, 0);
-        if (!connection.openPort()) {
-            if (onError != null) {
-                throw new Exception("Falha ao abrir a porta!");
-            }
-        }
-        connection.addDataListener(new SerialPortDataListener() {
-            @Override
-            public int getListeningEvents() {
-                return SerialPort.LISTENING_EVENT_PORT_DISCONNECTED;
-            }
-
-            @Override
-            public void serialEvent(SerialPortEvent event) {
-                connection.closePort();
-                System.out.println("erro:");
-                onError.accept("Dispositivo desconectado");   
-            }
-        });
-
-        this.portConnection = targetPort;
-    }
-
-    public void setOnError(Consumer<String> onError) {
-        this.onError = onError;
-    }
 }
