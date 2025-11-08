@@ -34,6 +34,13 @@ public class Storage {
             idEnd = binarySearch(range.getEnd());
         }
 
+        if(idStart < 0 ){
+            idStart = 0;
+        }
+        if(idEnd < 0){
+            idEnd = tireArmazen.size() -1;
+        }
+
         List<TireTemperature> subList = tireArmazen.subList(idStart,idEnd + 1);
         return subList;
     }
