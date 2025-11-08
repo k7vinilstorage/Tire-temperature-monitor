@@ -1,0 +1,47 @@
+.dialog-pane{
+    -fx-background-color: #dcdcdc;
+    
+}
+
+.dialog-pane:header .header-panel{
+    -fx-background-color: #2e3365;
+    -fx-padding: 8px;
+}
+
+.dialog-pane:header .header-panel .label{
+    -fx-text-fill: white;
+    -fx-font-weigth: bold;
+    -fx-font-size: 20px;
+}
+
+.text-field{
+    -fx-background-color:#bdbdbd;
+    -fx-background-radius:3;
+    -fx-font-family: monospace;
+}
+
+.label{
+    -fx-font-size: 20px;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #088b00; /* verde */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 5 20;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #06a000;
+}
+
+/* Botão Cancel diferente (cinza) */
+.dialog-pane .button-bar .button:cancel {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+}
+.dialog-pane .button-bar .button:cancel:hover {
+    -fx-background-color: #ba0000;
+}

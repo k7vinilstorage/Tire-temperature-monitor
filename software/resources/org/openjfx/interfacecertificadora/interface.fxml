@@ -19,12 +19,11 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="800.0" minWidth="300.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.interfacecertificadora.FxmlInterfaceController">
-    
+<AnchorPane id="AnchorPane" minHeight="800.0" minWidth="300.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.interfacecertificadora.controller.InterfaceController">
    <children>
       <SplitPane id="mainSplitPane" dividerPositions="0.0862708719851577" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" prefWidth="1920.0" style="-fx-background-color: #2E3353;">
+         <items>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" prefWidth="1920.0" style="-fx-background-color: #2E3353;">
                <children>
                   <Label fx:id="rtTitle1" layoutX="41.0" layoutY="4.0" prefHeight="82.0" prefWidth="264.0" text="FORMULA" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="4.0">
                      <font>
@@ -38,7 +37,7 @@
                   </Label>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.1" prefHeight="900.0" prefWidth="1918.0" styleClass="body" stylesheets="@style/gridAll.css">
+            <AnchorPane minHeight="0.1" prefHeight="900.0" prefWidth="1918.0" styleClass="body" stylesheets="@style/gridAll.css">
                <children>
                   <HBox prefHeight="764.0" prefWidth="962.0" styleClass="HBoxbodyAll" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -50,7 +49,7 @@
                                        <graphic>
                                           <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                              <children>
-                                                <Circle fx:id="cicleStatus" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE">
+                                                <Circle fx:id="cicleStatus" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="btnStatus-off">
                                                    <HBox.margin>
                                                       <Insets />
                                                    </HBox.margin>
@@ -75,20 +74,21 @@
                                  </VBox.margin>
                                  <padding>
                                     <Insets left="40.0" />
-                                 </padding></AnchorPane>
+                                 </padding>
+                              </AnchorPane>
                               <AnchorPane prefHeight="712.0" prefWidth="648.0">
                                  <children>
                                     <VBox minHeight="400.0" prefHeight="500.0" prefWidth="100.0" styleClass="VBLineChart" stylesheets="@style/gridAll.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <AnchorPane prefHeight="803.0" prefWidth="1222.0">
+                                          <AnchorPane id="backgroundLinechart" prefHeight="803.0" prefWidth="1222.0" stylesheets="@style/gridAll.css">
                                              <children>
-                                                <LineChart fx:id="lcTemp" createSymbols="false" minWidth="400.0" stylesheets="@style/lineChart.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                  <xAxis>
-                                                    <NumberAxis animated="false" label="Tempo (s)" minorTickCount="10" side="BOTTOM" upperBound="120.0" />
-                                                  </xAxis>
-                                                  <yAxis>
-                                                    <NumberAxis animated="false" label="Temperatura (°C)" minorTickCount="10" side="LEFT" upperBound="150.0" />
-                                                  </yAxis>
+                                                <LineChart fx:id="lcTemp" animated="false" createSymbols="false" minWidth="400.0" stylesheets="@style/lineChart.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                                                   <xAxis>
+                                                      <NumberAxis animated="false" label="Tempo (s)" minorTickCount="10" side="BOTTOM" upperBound="120.0" fx:id="xLineChart" />
+                                                   </xAxis>
+                                                   <yAxis>
+                                                      <NumberAxis animated="false" label="Temperatura (°C)" minorTickCount="10" side="LEFT" tickUnit="10.0" upperBound="150.0" fx:id="xLineChart" />
+                                                   </yAxis>
                                                 </LineChart>
                                              </children>
                                           </AnchorPane>
@@ -116,7 +116,7 @@
                                                             <Insets top="1.0" />
                                                          </padding>
                                                       </ToggleButton>
-                                                      <ToggleButton fx:id="btnC" mnemonicParsing="false" onAction="#exchangeTemperature" selected="true" stylesheets="@style/btn.css" text="Celsius">
+                                                      <ToggleButton fx:id="btnC" mnemonicParsing="false" selected="true" stylesheets="@style/btn.css" text="Celsius">
                                                          <styleClass>
                                                             <String fx:value="btn-All" />
                                                             <String fx:value="btn-Temp" />
@@ -128,7 +128,7 @@
                                                             <ToggleGroup fx:id="ToogleTemp" />
                                                          </toggleGroup>
                                                       </ToggleButton>
-                                                      <ToggleButton fx:id="btnF" mnemonicParsing="false" onAction="#exchangeTemperature" stylesheets="@style/btn.css" text="Fahrenheit " toggleGroup="$ToogleTemp">
+                                                      <ToggleButton fx:id="btnF" mnemonicParsing="false" stylesheets="@style/btn.css" text="Fahrenheit " toggleGroup="$ToogleTemp">
                                                          <styleClass>
                                                             <String fx:value="btn-All" />
                                                             <String fx:value="btn-Temp" />
@@ -170,7 +170,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button fx:id="btnExpData" mnemonicParsing="false" onAction="#exportReport" stylesheets="@style/btn.css" text="Gerar Relatório">
+                                          <Button fx:id="btnExpData" mnemonicParsing="false" onAction="#exportReport" stylesheets="@style/btn.css" text="Exportar Dados">
                                              <styleClass>
                                                 <String fx:value="btn-All" />
                                                 <String fx:value="btn-Opt" />
@@ -196,7 +196,8 @@
                                           <Insets left="40.0" right="20.0" />
                                        </padding>
                                     </HBox>
-                                 </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </VBox>
                         <VBox minHeight="-Infinity" prefHeight="982.0" prefWidth="647.0" styleClass="VBInstant" stylesheets="@style/gridAll.css">
@@ -222,20 +223,20 @@
                                              </children>
                                           </AnchorPane>
                                           <GridPane alignment="CENTER" prefHeight="609.0" prefWidth="566.0">
-                                            <columnConstraints>
-                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                            </columnConstraints>
-                                            <rowConstraints>
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                            </rowConstraints>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
                                              <children>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
-                                                            <Label fx:id="rtTEmpFL" stylesheets="@style/tempIntant.css" text="68">
+                                                            <Label fx:id="rtTEmpFL" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>
                                                                   <String fx:value="rtTemp" />
                                                                   <String fx:value="rtInstant" />
@@ -259,9 +260,9 @@
                                                 </VBox>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.rowIndex="1">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
-                                                            <Label fx:id="rtTEmpRL" stylesheets="@style/tempIntant.css" text="68">
+                                                            <Label fx:id="rtTEmpRL" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>
                                                                   <String fx:value="rtTemp" />
                                                                   <String fx:value="rtInstant" />
@@ -285,9 +286,9 @@
                                                 </VBox>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.columnIndex="1">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
-                                                            <Label fx:id="rtTEmpFR" stylesheets="@style/tempIntant.css" text="68">
+                                                            <Label fx:id="rtTEmpFR" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>
                                                                   <String fx:value="rtTemp" />
                                                                   <String fx:value="rtInstant" />
@@ -311,9 +312,9 @@
                                                 </VBox>
                                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="VBIntantTempTire" stylesheets="@style/tempIntant.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="90.0" prefHeight="170.0" prefWidth="105.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="-Infinity" prefHeight="170.0" prefWidth="140.0" styleClass="HBTemp" stylesheets="@style/tempIntant.css">
                                                          <children>
-                                                            <Label fx:id="rtTEmpRR" stylesheets="@style/tempIntant.css" text="68">
+                                                            <Label fx:id="rtTEmpRR" stylesheets="@style/tempIntant.css" text="0">
                                                                <styleClass>
                                                                   <String fx:value="rtTemp" />
                                                                   <String fx:value="rtInstant" />
@@ -348,7 +349,7 @@
                   </HBox>
                </children>
             </AnchorPane>
-        </items>
+         </items>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>

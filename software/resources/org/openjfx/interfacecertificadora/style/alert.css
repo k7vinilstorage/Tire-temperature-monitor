@@ -1,0 +1,50 @@
+.dialog-pane {
+    -fx-background-color: #dddddd; /* fundo cinza claro */
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #2e3365; /* barra superior azul */
+    -fx-padding: 10;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #222;
+    -fx-font-size: 1px;
+}
+
+.dialog-pane .content{
+    -fx-min-height:0px;
+    -fx-max-height:0px;
+    -fx-pref-height:0px;
+}
+
+.dialog-pane .button-bar {
+    /*-fx-alignment: left; /* centraliza horizontalmente */
+    -fx-padding: 5 0 5 0; /* ajusta espaço em cima/baixo */
+    
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #aaa;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 5 20 5 20;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #999;
+}
+
+.dialog-pane .button-bar .button:pressed {
+    -fx-background-color: #777;
+}

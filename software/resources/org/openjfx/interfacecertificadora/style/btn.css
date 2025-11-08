@@ -19,8 +19,8 @@
 }
 
 .btn-All:hover{
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 0, 3);
 }
 
@@ -123,14 +123,14 @@
     -fx-opacity:1;
 }
 
-#cicleStatus{
-    -fx-fill: rgb(255, 0, 0);
-    -fx-stroke: rgb(255, 0, 0);
-}
-
-#btnStatus:selected #cicleStatus{
+.btnStatus-on{
     -fx-fill: rgb(0, 255, 0);
     -fx-stroke: rgb(0, 255, 0);
+}
+
+.btnStatus-off{
+    -fx-fill: rgb(255, 0, 0);
+    -fx-stroke: rgb(255, 0, 0);
 }
 
 #btnStatus:hover{
