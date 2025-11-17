@@ -31,8 +31,9 @@ Sumario
 | [Requisistos funcionis](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Requisitos%20de%20usu%C3%A1rio/Requisitos%20Funcionais.md)  |
 | [Requisitos não funcionais](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Requisitos%20de%20usu%C3%A1rio/Requisitos%20Nao%20Funcionais.md)  |
 | [História de usuario](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Requisitos%20de%20usu%C3%A1rio/Historias%20de%20Usuarios.md)  |
+| [Histórias de usuario GPT](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Requisitos%20de%20usu%C3%A1rio/Prompt-Historias-Usuarios.pdf) |
 | [Protótipo de alta fidelidade](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Prot%C3%B3tipo%20de%20alta%20fidelidade/Link%20para%20prot%C3%B3tipo.md)  |
-| [Requisistos do Sistema]([https://github.com/k7vinilstorage/Tire-temperature-monitor/tree/main/Requisitos%20de%20Sistema/Diagram%20de%20casos%20de%20uso](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Requisitos%20de%20Sistema/Descri%C3%A7%C3%A3oPasta.md))  |
+| [Requisistos de Sistema](https://github.com/k7vinilstorage/Tire-temperature-monitor/blob/main/Requisitos%20de%20Sistema/Descri%C3%A7%C3%A3oPasta.md)  |
 
 ## Objetivo
 Desenvolver um sistema de monitoramento de temperatura de pneus para protótipo do projeto de extensão Fórmula CP, utilizando sensores infravermelho e um microcontrolador e enviar as leituras dos sensores para o sistema de telemetria já existente do projeto. Projetando uma interface gráfica para visualização dos dados.
