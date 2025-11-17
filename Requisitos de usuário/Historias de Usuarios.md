@@ -100,3 +100,8 @@ A Tabela 3 a seguir contém as Histórias de Usuárias elicitadas.
 <div style="text-align: center">
 <p>Tabela 3: História de Usuário</p>
 </div>
+
+# 2. Referências
+
+
+<a href="../README.md">VOLTAR INÍCIO</a>
