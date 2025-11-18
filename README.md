@@ -23,7 +23,6 @@
 | [João Alberto Benaci](https://github.com/k7vinilstorage) |
 | [Arthur Henrique Jardim](https://github.com/arthur-hj)  |
 
-
 <br><br>
 #
 Sumario
