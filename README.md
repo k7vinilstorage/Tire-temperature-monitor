@@ -17,11 +17,12 @@
 <br>
 
 ## Integrantes
-| [Rafael Munhoz Castro](https://github.com/RafinhaW74)   |
+
 |:--------|
-| [Vinícius Souza Dias](https://github.com/vinicius-10) |
-| [João Alberto Benaci](https://github.com/k7vinilstorage) |
 | [Arthur Henrique Jardim](https://github.com/arthur-hj)  |
+| [João Alberto Benaci](https://github.com/k7vinilstorage) |
+| [Rafael Munhoz Castro](https://github.com/RafinhaW74)   |
+| [Vinícius Souza Dias](https://github.com/vinicius-10) |
 
 <br><br>
 #
