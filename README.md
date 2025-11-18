@@ -18,6 +18,7 @@
 
  
 ## Integrantes
+| Alunos |
 |:--------|
 | [Arthur Henrique Jardim](https://github.com/arthur-hj)  |
 | [João Alberto Benaci](https://github.com/k7vinilstorage) |
